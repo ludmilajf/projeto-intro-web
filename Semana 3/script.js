@@ -101,7 +101,7 @@ objetoMarines = {
 }
 
 // Parte 2
-let todosArtistas = []
+// let todosArtistas = []
 
 // Parte 3
 // todosArtistas.push(objetoAnastacia, objetoDominguinhos, objetoGonzaga, objetoMarines)
@@ -137,13 +137,86 @@ let todosArtistas = []
 //     alert("O item não foi adicionado")
 // }
 
-//tentativa com if ternário:
-objetoDominguinhos.vivo === true ? todosArtistas.push(objetoDominguinhos) : alert("O item não foi adicionado")
+// //tentativa com if ternário:
+// objetoDominguinhos.vivo === true ? todosArtistas.push(objetoDominguinhos) : alert("O item não foi adicionado")
 
-objetoAnastacia.vivo === true ? todosArtistas.push(objetoAnastacia) : alert("O item não foi adicionado")
+// objetoAnastacia.vivo === true ? todosArtistas.push(objetoAnastacia) : alert("O item não foi adicionado")
 
-objetoGonzaga.vivo === true ? todosArtistas.push(objetoGonzaga) : alert("O item não foi adicionado")
+// objetoGonzaga.vivo === true ? todosArtistas.push(objetoGonzaga) : alert("O item não foi adicionado")
 
-objetoMarines.vivo === true ? todosArtistas.push(objetoMarines) : alert("O item não foi adicionado")
+// objetoMarines.vivo === true ? todosArtistas.push(objetoMarines) : alert("O item não foi adicionado")
 
-console.log(todosArtistas)
+// console.log(todosArtistas)
+
+//=============================
+// SEMANA 3
+let guardarObjetos = [{
+        nome: "Dominguinhos",
+        idade: Number(71),
+        discografia: Number(50),
+        vivo: false,
+        sucessos: ["Apôs tá certo", " Festa no sertão", " Oi, lá vou eu!", " Quem me levará sou eu", " Isso aqui tá bom demais"],
+    },
+    {
+        nome: "Anastácia",
+        idade: Number(82),
+        discografia: Number(31),
+        vivo: true,
+        sucessos: ["Eu sou Anastácia", "Daquele jeito", "Saudade matadeira", "Canto do Sabiá"],
+    },
+    {
+        nome: "Luiz Gonzaga",
+        idade: Number(76),
+        discografia: Number(74),
+        vivo: false,
+        sucessos: ["Baião", "Festa", "Asa branca", "O Xote das meninas", "Respeita Januário", "Olha pro céu"],
+    },
+    {
+        nome: "Marinês",
+        idade: Number(71),
+        discografia: Number(34),
+        vivo: false,
+        sucessos: ["Bate coração", "Cidade de pedreira","Desabafo", "Nordeste valente"],
+    }
+]
+
+
+//Parte 1
+for(let i of guardarObjetos){
+    console.log(`
+    ${i.nome.toUpperCase()}
+    Idade: ${i.idade}
+    Discografia: ${i.discografia} álbuns
+    A(o) Artista está viva(o): ${i.vivo}
+    Sucessos: ${i.sucessos.join("; ")}
+    `)
+}
+
+//Parte 2
+for(objetos of guardarObjetos){
+    for(propriedade in objetos){
+        console.log(`${propriedade}: ${objetos[propriedade]}`)
+    }
+}
+
+//Parte 3
+function objetosArtistas (objeto) {
+    for(let i in objeto){
+    console.log(`
+    ${objeto[i].nome.toUpperCase()}
+    ${objeto[i].idade}
+    ${objeto[i].discografia}
+    ${objeto[i].vivo}
+    ${objeto[i].sucessos}
+    `)}
+}
+objetosArtistas(guardarObjetos)
+
+//Parte 4
+const objetoNome = guardarObjetos.map((objeto, string) => {
+    if (objeto.nome) {
+        console.log(objeto.nome.toUpperCase())
+    }else{
+        alert("O item não foi adicionado")
+    }
+})
