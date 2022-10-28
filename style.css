@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 246, 231);
+}
+
+header {
+    background-color: rgba(168, 105, 53, 0.558);
+    color: rgb(85, 23, 23);
+    text-align: center;
+    padding: 30px;
+    border-radius: 0.7rem;
+    font-family: Arial, Helvetica, serif;
+}
+
+
+main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 78.9vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.caixa-pesquisa {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#pesquisar {
+    height: 25px;
+    width: 220px;
+}
+
+#botao-pesquisar{
+    width: 90px;
+    height: 30px;
+    background-color: rgb(235, 222, 194);
+    padding: 5px 10px;
+    border-radius: 8%;
+    border-style: outset;
+    border-color: rgba(168, 105, 53, 0.558);
+    align-items: center;
+    cursor: pointer;
+}
+
+#caixa-artista {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 222, 194);
+    border: 1px solid rgba(168, 105, 53, 0.558);
+    padding: 10px;
+    border-radius: 1rem;
+    padding-left: 10px;
+    height: auto;
+    width: 45vw;
+}
+
+#caixa-artista:hover{
+    box-shadow: 1px 1px 1px 1px rgba(168, 105, 53, 0.558) ;
+    height: auto;
+    width: 48vw;
+    transition: 0.1s;
+}
+
+ul {
+    margin: 30px;
+}
+
+
+footer {
+    background-color: rgba(168, 105, 53, 0.558);
+    color: rgb(85, 23, 23);
+    text-align: center;
+    padding: 20px;
+    border-radius: 0.7rem;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+
+@media screen and (min-device-width: 1200px) {
+    main {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .caixa-pesquisa {
+        display: flex;
+        align-items: baseline;
+    }
+
+
+    .caixa-artista {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(235, 222, 194);
+        border: 1px solid rgba(168, 105, 53, 0.558);
+        padding: 10px;
+        border-radius: 1rem;
+        padding-left: 10px;
+        height: auto;
+        width: 40vw;
+    }
+
+    footer {
+        background-color: rgba(168, 105, 53, 0.558);
+        color: rgb(85, 23, 23);
+        text-align: center;
+        padding: 20px;
+        border-radius: 0.7rem;
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-device-width: 800px) and (max-device-width: 1200px) {
+    main {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .caixa-pesquisa {
+        display: grid;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caixa-artista {
+        display: grid;
+        height: auto;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-device-width: 800px) {
+
+
+    main {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .caixa-pesquisa {
+        display: grid;
+    }
+
+    .caixa-artista {
+        display: grid;
+        height: auto;
+        width: auto;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
