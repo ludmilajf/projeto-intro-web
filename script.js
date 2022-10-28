@@ -104,7 +104,7 @@ listaMarines.innerHTML += ' <li><strong>Sucessos</strong>: <em>Bate coração; C
 
 
 
-
+const inputPesquisa = document.getElementById("pesquisar").value
 const caixaArtista = document.getElementById("caixa-artista")
 
 function pesquisaArtista() {
@@ -115,7 +115,9 @@ function pesquisaArtista() {
         return value == artista.value
     })
 
-    if (!opcoesSelecionadas) {
+    if(inputPesquisa.lenght === 0){
+        alert ("Campo de pesquisa vazio.")
+    }else if (!opcoesSelecionadas) {
         alert("Artista não encontrado")
         artista.value = ""
     }else{
